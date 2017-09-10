@@ -5,11 +5,14 @@
       "How many people have you killed?",
       "If you can only take one person in this room to a cast away, who will you pick?",
       "What is a near-death experience of yours?",
-      "What is your favourite song and why?"
+      "What is your favourite song and why?",
+      "Ford or Holden, and why?",
+      "A good friend needs a kidney. Would you donate one of yours?",
+      "A couple that you're good friends with is having trouble conceiving. They ask you to donate your sperm or egg. Would you do it?"
     ];
     var stop;
     
-    $scope.question = "How to spell Jeff's surname?";
+    $scope.question = "";
     
     $scope.generateQuestion = function(){
       var numberOfRepeates = 4;
@@ -20,7 +23,7 @@
         var randomIndex = Math.floor(Math.random() * questions.length);
         $scope.question = questions[randomIndex];
         $scope.questionStyle = {color: "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16)};
-      }, 200, numberOfRepeates);
+      }, 100, numberOfRepeates);
     };
   };
   
